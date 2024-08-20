@@ -34,12 +34,5 @@ def main():
     model_path = 'realnvp.pth'
     torch.save(model.state_dict(), model_path)
 
-    train_loader_data = {
-        'dataset': dataset,
-        'batch_size':train_loader.batch_size,
-        'shuffle': train_loader.shuffle
-    }
-
-    torch.save(train_loader_data, 'train_loader.pth')
 if __name__ == "__main__":
     main()
